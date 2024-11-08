@@ -3,25 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="newsletter.css">
     <title>Newsletter</title>
 </head>
 <body>
     <!-- Newsletter -->
-    <section class="newsletter">
-        <div id="newsletter">
-            <h1>SIGN UP FOR OUR NEWSLETTER AND WIN AWARDS</h1>
-            <label for="firstName">First name</label>
-            <input type="text" id="firstName" placeholder="First Name">
+    <div class="title">
+        <h1>SIGN UP FOR OUR<br>NEWSLETTER<br>AND WIN AWARDS</h1>
+    </div>
 
-            <label for="lastName">Last name</label>
-            <input type="text" id="lastName" placeholder="Last Name">
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="first-name">First name</label>
+                <input type="text" id="first-name" placeholder="first name" required>
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last name</label>
+                <input type="text" id="last-name" placeholder="last name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="email address" required>
+            </div>
+            <button type="submit" class="submit-button">SIGN ME UP</button>
+        </form>
+    </div>
 
-            <label for="email">Email</label>
-            <input type="email" name="email" placeholder="Email">
-
-            <input type="button" value="SIGN ME UP">
-            
-        </div>
-     </section>
+     <!-- Sponsors Button -->
+     <div class="sponsors-button">
+        <button type="button">SPONSORS >>></button>
+    </div>
 </body>
 </html>
