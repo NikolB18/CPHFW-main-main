@@ -60,12 +60,16 @@ nav ul li a {
 .hero {
     text-align: left;
     padding: 20px;
+    position: relative;
+  padding-top: 120px; /* Offset by header + navbar height */
+    
 }
 
 .hero-content {
     max-width: 800px;
     margin: 0 auto;
     text-align: left;
+    z-index: 998;
 }
 
 .hero h2 {
