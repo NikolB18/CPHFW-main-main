@@ -4,6 +4,7 @@ body{
     flex-direction: column;
 }
 
+
 /* Hero Section */
 
 .hero {
@@ -70,29 +71,7 @@ body{
     border-radius: 5px;
 }
 
-/* Footer
 
-.footer-content {
-    background-color: #A8BBA5;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 100%;
-}
-
-.footer-info {
-    max-width: 300px;
-    line-height: 1;
-}
-
-.footer-icons{
-    background-color: #A8BBA5;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-} */
 
 /* Footer Styles */
 .footer {
