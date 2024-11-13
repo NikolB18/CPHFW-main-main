@@ -4,6 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="events.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <title>Newsletter</title>
 </head>
 <body>
+        <!-- Header and Navigation -->
+         <!--git edit-->
+         <header>
+            <div class="header-section">
+                <div class="header-top">
+                <h1>Copenhagen Fashion Week</h1>
+                </div>
+                <div class="language-selector">
+                  <!-- Your language selection elements here -->
+                  <select>
+                    <option value="en">English</option>
+                    <option value="es">Danish</option>
+                    <!-- Add more languages as needed -->
+                  </select>
+                </div>
+                <div class="subheader"><p>powered by ZALANDO</p></div>
+              </div>
+            <!--nav bar start (add javascript link on each page)-->
+      <nav class="navbar">
+    
+          <a href="javascript:void(0);" class="toggle-button" onclick="toggleMenu()">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </a>
+          <div class="navbar-links" id="navbarLinks">
+            <ul>
+                <li><a href="index.html" class="category-btn">About</a></li>
+                    <li><a href="#brands" class="category-btn">Brands</a></li>
+                    <li><a href="events.html" class="category-btn">Events</a></li>
+                    <li><a href="gallery.html" class="category-btn">Gallery</a></li>
+                    <li><a href="newsletter.html" class="category-btn">Newsletter</a> </li>
+                    <li><a href="map.html" class="category-btn">Map</a></li>
+            
+              </ul>
+          </div>
+      </nav>
+      <!--nav bar end-->
+     </header>
+     <script src=".vscode\javascript.js"></script>
+</body>
