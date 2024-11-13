@@ -27,6 +27,7 @@
     box-sizing: border-box;
   }
   .header-top {
+    padding-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,11 +36,13 @@
   
   /* Subheader styling */
   .subheader {
+    padding-left: 15px;
     font-size: 0.9em;
     margin-top: 5px;
   }
 /* Navbar Styles */
 .navbar {
+    margin-top: 20px;
     display: flex;
     flex-wrap: flex;
     justify-content: center;
