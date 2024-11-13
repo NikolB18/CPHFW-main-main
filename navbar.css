@@ -1,33 +1,29 @@
 :root {
-    --primary-color: #265847; /* Background color for body */
-    --secondary-color: #ffedd2; /* Light cream color */
-    --text-color: #808f85; /* Grayish text color */
-    --button-border-color: #ffffff; /* White border for buttons */
-    --button-bg-color: transparent; /* Transparent button background */
-    --event-bg-color: rgba(36, 9, 9, 0.89); /* Background for event date */
-    --image-bg-color: #0a1a143d; /* Transparent overlay for images */
-    --navbar-bg-color: rgba(38, 88, 71, 0.9); /* Navbar background */
-    --navbar-link-hover-color: #ddd; /* Hover color for navbar links */
-    --select-bg-color: rgb(65, 3, 3); /* Background for language selector */
-    --scrollbar-color: transparent; /* Scrollbar color */
+    --navbar-link-hover-color: #10884a; /* Hover color for navbar links */
   }
   
   * {
-    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
   }
+  .fjalla-one-regular {
+    font-family: "Fjalla One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
   .header-section {
     position: fixed;
+    font-family: "Fjalla One", sans-serif;
     width: 100%;
     top: 0;
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000; /* Ensure it stays on top of other elements */
-    height: 60px;
+    height: 70px;
     box-sizing: border-box;
   }
   .header-top {
@@ -40,7 +36,6 @@
   /* Subheader styling */
   .subheader {
     font-size: 0.9em;
-    color: #555;
     margin-top: 5px;
   }
 /* Navbar Styles */
@@ -48,129 +43,76 @@
     display: flex;
     flex-wrap: flex;
     justify-content: center;
-    align-items: center;
-    background-color: rgba(116, 100, 100, 0.7);
+    background-color: rgba(168, 187, 165);
     padding: 10px 20px;
     position: fixed;
-    top: 60px;
+    top: 70px;
     width: 100%;
     z-index: 999;
     box-sizing: border-box;
     height: 50px;
-  }
-  @media (max-width: 768px) {
-    .navbar {
-      padding: 8px 15px;
-      gap: 10px; /* Reduce spacing between navbar items */
-    }
+    font-size: 1.2em;
+    font-family: "Fjalla One", sans-serif;
+}
+.toggle-button {
+  display: none; /* Hide toggle button by default (only show on mobile) */
+  cursor: pointer;
+}
+
+/* Styling for each bar in the toggle button */
+.bar {
+  display: block;
+  width: 25px; /* Width of each bar */
+  height: 3px; /* Thickness of each bar */
+  margin: 5px 0; /* Spacing between bars */
+  background-color: rgb(10, 10, 10); /* Bar color */
+  transition: 0.3s; /* Smooth transition for animation */
+}
+
+/* Navbar links styling */
+.navbar-links {
+  display: flex;
+}
+
+.navbar-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 50px;
+}
+
+.navbar-links a {
+  color: rgb(10, 10, 10);
+  text-decoration: none;
+  font-size: 22px;
+}
+
+/* Mobile view: hide navbar links and show toggle button */
+@media (max-width: 768px) {
   
-    .navbar a {
-      font-size: 0.9em; /* Adjust font size for smaller screens */
-    }
-  }
-  
-  
-  /* Hamburger Menu */
-  .toggle-button {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-  }
-  
-  .toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: var(--secondary-color);
-    border-radius: 10px;
-  }
-  
-  /* Navbar Links */
   .navbar-links {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar-links.active {
-    display: flex;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: var(--navbar-bg-color);
+    display: none; /* Hide links by default on mobile */
     flex-direction: column;
+    width: 100%;
+    background-color: rgba(168, 187, 165, 0.9);
+    position: absolute;
+    top: 50px; /* Adjust based on header height */
+    left: 0;
   }
-  
+
+  .navbar-links.active {
+    display: flex; /* Show links when toggle is active */
+  }
   .navbar-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    width: 100%;
+  }
+
+  .toggle-button {
+    display: block; /* Show toggle button on mobile */
   }
   
-  .navbar-links ul li {
-    margin-left: 20px;
-  }
-  
-  .navbar-links ul li a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-size: 1rem;
-  }
-  
-  .navbar-links ul li a:hover {
-    color: var(--navbar-link-hover-color);
-  }
-  
-  .content {
-    padding-top: 70px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
-  @media (max-width: 768px) {
-    .toggle-button {
-      display: flex;
-      display: flex;
-    }
-  
-    .navbar-links {
-      display: none;
-      width: 100%;
-      display: none;
-      width: 100%;
-    }
-  
-    .navbar-links ul {
-      flex-direction: column;
-      width: 100%;
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .navbar-links ul li {
-      text-align: center;
-      width: 100%;
-      margin: 10px 0;
-      text-align: center;
-      width: 100%;
-      margin: 10px 0;
-    }
-  
-    .navbar-links ul li a {
-      font-size: 1.2rem;
-      padding: 10px;
-      display: block;
-      font-size: 1.2rem;
-      padding: 10px;
-      display: block;
-    }
-  
-    .navbar-links.active {
-      display: flex;
-      display: flex;
-    }
-  }
+}
+
   /*end navbar css */
