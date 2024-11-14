@@ -42,7 +42,6 @@
   }
 /* Navbar Styles */
 .navbar {
-    margin-top: 20px;
     display: flex;
     flex-wrap: flex;
     justify-content: center;
